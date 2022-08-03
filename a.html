@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Place the meta description text here." />
+    <meta name="”robots”" content="index, follow" />
+    <meta name="keywords" content="seo tips" />
+    <title>jQuery UI Tabs - Default functionality</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+          var scroll = $(window).scrollTop();
+          console.log(scroll);
+          if (scroll > 50) {
+            document.getElementById("topnav").classList.add("fixed-top");
+            // add padding top to show content behind navbar
+          } else {
+            document.getElementById("topnav").classList.remove("fixed-top");
+            // remove padding top from body
+          }
+        });
+      });
+      // DOMContentLoaded  end
+    </script>
+  </head>
+  <body>
+    <!-- Top navigation -->
+    <div class="topnav" id="topnav">
+      <!-- Left-aligned links (default) -->
+      <div class="topnav-left">
+        <a href="#">LOGO</a>
+        <a href="javascript:void(0)" class="sm btnmenu">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!-- Centered link -->
+      <div class="topnav-centered mobile-container" style="display: none">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#service">Service</a>
+        <a href="#jobs">Jobs</a>
+      </div>
+      <!-- Right-aligned links -->
+      <div class="topnav-right pc">
+        <a href="#contact-us">Contact Us</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="mv">
+        <div class="mv-detail">
+          <h1>Stand out from the covid.</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+            eveniet omnis totam mollitia pariatur at nostrum ut, cumque enim
+            repellat nulla necessitatibus hic neque, ea rerum impedit? Ea,
+            aperiam sed!
+          </p>
+          <a href="#work">Recent Work</a>
+          <a>scroll down</a>
+        </div>
+      </div>
+    </div>
+    <div class="section2">
+      <div class="container">
+        <div class="about">
+          <div class="right">
+            <p><span>01</span> Who are We</p>
+            <h2>
+              We make deisgn that <br />
+              Lead and Inspire.
+            </h2>
+          </div>
+        </div>
+        <div class="about years" id="tabs">
+          <ul class="left">
+            <li><a href="javascript:void(0)" data-target="#2018">2018</a></li>
+            <li><a href="javascript:void(0)" data-target="#2019">2019</a></li>
+            <li><a href="javascript:void(0)" data-target="#2020">2020</a></li>
+            <li><a href="javascript:void(0)" data-target="#2021" class="active">2021</a></li>
+            <li><a href="javascript:void(0)" data-target="#2022">2022</a></li>
+          </ul>
+          <div class="right" id="2018">
+            <div class="yearscontent">
+              <p><img src="a.jpg" /></p>
+              <div class="half">
+                <h3>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                  temporibus asperiores id quia, est ipsa earum odio explicabo
+                  excepturi similique, nihil architecto. Id, cum? Odit maxime
+                  eligendi fugiat eum nam!
+                </p>
+                <a href="#contact-us">Contact us</a>
+              </div>
+              <div class="half">
+                <div class="counter">
+                  <p class="big">28</p>
+                  <p>Lorem Isum</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right" id="2019">
+            <div class="yearscontent">
+              <p><img src="a.jpg" /></p>
+              <div class="half">
+                <h3>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                  temporibus asperiores id quia, est ipsa earum odio explicabo
+                  excepturi similique, nihil architecto. Id, cum? Odit maxime
+                  eligendi fugiat eum nam!
+                </p>
+                <a href="#contact-us">Contact us</a>
+              </div>
+              <div class="half">
+                <div class="counter">
+                  <p class="big">28</p>
+                  <p>Lorem Isum</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right" id="2020">
+            <div class="yearscontent">
+              <p><img src="a.jpg" /></p>
+              <div class="half">
+                <h3>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                  temporibus asperiores id quia, est ipsa earum odio explicabo
+                  excepturi similique, nihil architecto. Id, cum? Odit maxime
+                  eligendi fugiat eum nam!
+                </p>
+                <a href="#contact-us">Contact us</a>
+              </div>
+              <div class="half">
+                <div class="counter">
+                  <p class="big">28</p>
+                  <p>Lorem Isum</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right show" id="2021">
+            <div class="yearscontent">
+              <p><img src="a.jpg" /></p>
+              <div class="half">
+                <h3>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                  temporibus asperiores id quia, est ipsa earum odio explicabo
+                  excepturi similique, nihil architecto. Id, cum? Odit maxime
+                  eligendi fugiat eum nam!
+                </p>
+                <a href="#contact-us">Contact us</a>
+              </div>
+              <div class="half">
+                <div class="counter">
+                  <p class="big">28</p>
+                  <p>Lorem Isum</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right" id="2022">
+            <div class="yearscontent">
+              <p><img src="a.jpg" /></p>
+              <div class="half">
+                <h3>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                  temporibus asperiores id quia, est ipsa earum odio explicabo
+                  excepturi similique, nihil architecto. Id, cum? Odit maxime
+                  eligendi fugiat eum nam!
+                </p>
+                <a href="#contact-us">Contact us</a>
+              </div>
+              <div class="half">
+                <div class="counter">
+                  <p class="big">28</p>
+                  <p>Lorem Isum</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(".btnmenu").click(function () {
+        $(this).parent().parent().toggleClass("show");
+        $(".mobile-container").slideToggle("fast");
+        $("body").toggleClass("overlay");
+      });
+      $("#tabs a").click(function(){
+        var sel = $(this).data('target');
+        $('#tabs li a').removeClass("active");
+        $('#tabs .right').removeClass("show");
+        $(sel).addClass("show");
+        $(this).addClass("active");
+      })
+    </script>
+  </body>
+</html>
