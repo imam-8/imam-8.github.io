@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
       var scroll = $(window).scrollTop();
-      console.log(scroll);
       if (scroll > 50) {
         document.getElementById("topnav").classList.add("fixed-top");
         // add padding top to show content behind navbar
@@ -13,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   // DOMContentLoaded  end
 
-
+$(document).ready(function (){
   $(".btnmenu").click(function () {
     $(this).parent().parent().toggleClass("show");
     $(".mobile-container").slideToggle("fast");
@@ -26,3 +25,4 @@ document.addEventListener("DOMContentLoaded", function () {
     $(sel).addClass("show");
     $(this).addClass("active");
   })
+});

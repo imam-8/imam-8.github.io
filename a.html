@@ -7,27 +7,36 @@
     <meta name="”robots”" content="index, follow" />
     <meta name="keywords" content="seo tips" />
     <title>jQuery UI Tabs - Default functionality</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </head>
   <body>
     <!-- Top navigation -->
     <div class="topnav" id="topnav">
       <!-- Left-aligned links (default) -->
       <div class="topnav-left">
-        <a href="#">LOGO</a>
+        <a href="#">
+          <img src="img/logo.png" width="159" height="40" alt="folio." />
+          <img
+            src="img/logo-b.png"
+            width="159"
+            height="40"
+            alt="folio."
+            class="inverted"
+          />
+        </a>
         <a href="javascript:void(0)" class="sm btnmenu">
           <i class="fa fa-bars"></i>
         </a>
       </div>
       <!-- Centered link -->
       <div class="topnav-centered mobile-container" style="display: none">
-        <a href="#about">About</a>
+        <a href="#about" class="active">About</a>
         <a href="#work">Work</a>
         <a href="#service">Service</a>
         <a href="#jobs">Jobs</a>
@@ -40,15 +49,30 @@
     <div class="container">
       <div class="mv">
         <div class="mv-detail">
-          <h1>Stand out from the covid.</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            eveniet omnis totam mollitia pariatur at nostrum ut, cumque enim
-            repellat nulla necessitatibus hic neque, ea rerum impedit? Ea,
-            aperiam sed!
+          <h1>
+            Stand Out<br />
+            from The Crowd.
+          </h1>
+          <p class="desc">
+            Agency is a full-service agency, busy designing
+            <br />
+            and building beautiful digital products, brands, <br />and
+            experiences.
           </p>
-          <a href="#work">Recent Work</a>
-          <a>scroll down</a>
+          <br />
+          <p class="mt48">
+            <a href="#work" class="btnblue">Recent Work</a>
+          </p>
+          <br />
+          <p class="mt110">
+            <a href="#" class="scrolldownbtn">
+              <img src="img/arrowscroll.png" alt="arrowscroll" />
+              <span>Scroll down</span>
+            </a>
+          </p>
+        </div>
+        <div class="mv-image">
+          <img src="img/mv.png" alt="3d + wait" />
         </div>
       </div>
     </div>
@@ -68,12 +92,16 @@
             <li><a href="javascript:void(0)" data-target="#2018">2018</a></li>
             <li><a href="javascript:void(0)" data-target="#2019">2019</a></li>
             <li><a href="javascript:void(0)" data-target="#2020">2020</a></li>
-            <li><a href="javascript:void(0)" data-target="#2021" class="active">2021</a></li>
+            <li>
+              <a href="javascript:void(0)" data-target="#2021" class="active"
+                >2021</a
+              >
+            </li>
             <li><a href="javascript:void(0)" data-target="#2022">2022</a></li>
           </ul>
           <div class="right" id="2018">
             <div class="yearscontent">
-              <p><img src="a.jpg" /></p>
+              <p><img src="img/a.jpg" /></p>
               <div class="half">
                 <h3>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -96,7 +124,7 @@
           </div>
           <div class="right" id="2019">
             <div class="yearscontent">
-              <p><img src="a.jpg" /></p>
+              <p><img src="img/a.jpg" /></p>
               <div class="half">
                 <h3>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -119,7 +147,7 @@
           </div>
           <div class="right" id="2020">
             <div class="yearscontent">
-              <p><img src="a.jpg" /></p>
+              <p><img src="img/a.jpg" /></p>
               <div class="half">
                 <h3>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -142,7 +170,7 @@
           </div>
           <div class="right show" id="2021">
             <div class="yearscontent">
-              <p><img src="a.jpg" /></p>
+              <p><img src="img/a.jpg" /></p>
               <div class="half">
                 <h3>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -165,7 +193,7 @@
           </div>
           <div class="right" id="2022">
             <div class="yearscontent">
-              <p><img src="a.jpg" /></p>
+              <p><img src="img/a.jpg" /></p>
               <div class="half">
                 <h3>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.

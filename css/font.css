@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    font-weight: 700;
+    src: url('../font/sfprodisplaybold-webfont.eot');
+    src: url('../font/sfprodisplaybold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/sfprodisplaybold-webfont.woff2') format('woff2'),
+         url('../font/sfprodisplaybold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'SF Pro Display';
+    font-weight: 600;
+    src: url('../font/sfprodisplaymedium-webfont.eot');
+    src: url('../font/sfprodisplaymedium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/sfprodisplaymedium-webfont.woff2') format('woff2'),
+         url('../font/sfprodisplaymedium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    font-weight: 500;
+    src: url('../font/sfprodisplaymedium-webfont.eot');
+    src: url('../font/sfprodisplaymedium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/sfprodisplaymedium-webfont.woff2') format('woff2'),
+         url('../font/sfprodisplaymedium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'SF Pro Display';
+    font-weight: 400;
+    src: url('sfprodisplayregular-webfont.eot');
+    src: url('sfprodisplayregular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sfprodisplayregular-webfont.woff2') format('woff2'),
+         url('sfprodisplayregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
