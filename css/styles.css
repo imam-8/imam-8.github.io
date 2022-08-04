@@ -306,7 +306,8 @@ margin-bottom: 40px;
   width: 402px;
   height: 402px;
   border-radius: 50%;
-  box-shadow: 0px 23px 50px rgb(0 0 0 / 25%);
+  box-shadow: 0px 23px 50px #1d1d36;
+	box-shadow: 0px 23px 50px rgba(0 0 0 / 25%);
 }
 .counter>div{
   position: absolute;
@@ -329,4 +330,81 @@ line-height: 239px;
 text-align: center;
 letter-spacing: normal;
 color: #FFFFFF;
+}
+.about.years{
+  padding-bottom: 128px;
+}
+.section3 .left{
+  width: 17%;
+}
+.section3 .right{
+  width: 83%;
+}
+
+.section3 .content-inner>div{
+  float: left;
+}
+.sub-h2.invert{
+  color: #5468E7;
+}
+.sub-h2.invert span{
+  color: #5468E7;
+}
+h2.invert{
+  color: #232340;
+}
+
+.section3 {
+  padding-top: 129px;
+  background-image: url(../img/bg-section-3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  padding-bottom: 163px;
+}
+.card-item{
+  position: relative;
+  float:left;
+  width:calc(50% - 18px);
+  padding-right: 100px;
+  margin-right: 35px;
+}
+.card-item:nth-child(even){
+  margin-right: 0;
+}
+
+.card-title{
+  margin-top: 40px;
+  font-weight: 700;
+font-size: 40px;
+line-height: 48px;
+letter-spacing: -0.4px;
+color: #232340;
+}
+
+.card-detail{
+  margin-top: 23px;
+  font-weight: 400;
+font-size: 18px;
+line-height: 32px;
+color: #606060;
+}
+.label{
+  font-weight: 600;
+font-size: 14px;
+line-height: 18px;
+text-align: center;
+color: #FFFFFF;
+background: #9A97ED;
+border-radius: 20px;
+display: inline;
+padding:11px 23px;
+top:40px;
+left:-40px;
+position: absolute;
+}
+.strokelink{
+  position: absolute;
+  top: 372px;
+  right: 68px;
 }
