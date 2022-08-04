@@ -6,13 +6,14 @@
     <meta name="description" content="Place the meta description text here." />
     <meta name="”robots”" content="index, follow" />
     <meta name="keywords" content="seo tips" />
-    <title>jQuery UI Tabs - Default functionality</title>
+    <title>folio.</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="img/favicon.png" type="image/icon type" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
     <script src="js/script.js"></script>
   </head>
   <body>
@@ -47,169 +48,185 @@
       </div>
     </div>
     <div class="container">
-      <div class="mv">
-        <div class="mv-detail">
-          <h1>
-            Stand Out<br />
-            from The Crowd.
-          </h1>
-          <p class="desc">
-            Agency is a full-service agency, busy designing
-            <br />
-            and building beautiful digital products, brands, <br />and
-            experiences.
-          </p>
-          <br />
-          <p class="mt48">
-            <a href="#work" class="btnblue">Recent Work</a>
-          </p>
-          <br />
-          <p class="mt110">
-            <a href="#" class="scrolldownbtn">
-              <img src="img/arrowscroll.png" alt="arrowscroll" />
-              <span>Scroll down</span>
-            </a>
-          </p>
-        </div>
-        <div class="mv-image">
-          <img src="img/mv.png" alt="3d + wait" />
+      <div class="content-inner">
+        <div class="mv">
+          <div class="mv-detail">
+            <h1>
+              Stand Out<br />
+              from The Crowd.
+            </h1>
+            <p class="desc">
+              Agency is a full-service agency, busy designing
+              <br />
+              and building beautiful digital products, brands, <br />and
+              experiences.
+            </p>
+            <p class="mt48 flex">
+              <a href="#work" class="btnblue">Recent Work</a>
+            </p>
+            <p class="scrollbtn">
+              <a href="#" class="scrolldownbtn">
+                <img src="img/arrowscroll.png" alt="arrowscroll" />
+                <span>Scroll down</span>
+              </a>
+            </p>
+          </div>
+          <div class="mv-image">
+            <img src="img/mv.png" alt="3d + wait" />
+          </div>
         </div>
       </div>
     </div>
     <div class="section2">
       <div class="container">
-        <div class="about">
-          <div class="right">
-            <p><span>01</span> Who are We</p>
-            <h2>
-              We make deisgn that <br />
-              Lead and Inspire.
-            </h2>
+        <div class="content-inner">
+          <div class="about cf">
+            <div class="logo">
+              <img
+                src="img/logo_symbol.png"
+                alt="logo"
+                height="24"
+                width="24"
+              />
+            </div>
+            <div class="right">
+              <p class="sub-h2"><span>01</span> Who are We</p>
+              <h2>
+                We make deisgn that <br />
+                Lead and Inspire.
+              </h2>
+            </div>
           </div>
-        </div>
-        <div class="about years" id="tabs">
-          <ul class="left">
-            <li><a href="javascript:void(0)" data-target="#2018">2018</a></li>
-            <li><a href="javascript:void(0)" data-target="#2019">2019</a></li>
-            <li><a href="javascript:void(0)" data-target="#2020">2020</a></li>
-            <li>
-              <a href="javascript:void(0)" data-target="#2021" class="active"
-                >2021</a
-              >
-            </li>
-            <li><a href="javascript:void(0)" data-target="#2022">2022</a></li>
-          </ul>
-          <div class="right" id="2018">
-            <div class="yearscontent">
-              <p><img src="img/a.jpg" /></p>
-              <div class="half">
-                <h3>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h3>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  temporibus asperiores id quia, est ipsa earum odio explicabo
-                  excepturi similique, nihil architecto. Id, cum? Odit maxime
-                  eligendi fugiat eum nam!
-                </p>
-                <a href="#contact-us">Contact us</a>
-              </div>
-              <div class="half">
-                <div class="counter">
-                  <p class="big">28</p>
-                  <p>Lorem Isum</p>
+          <div class="about years cf" id="tabs">
+            <ul class="left">
+              <li><a href="javascript:void(0)" data-target="#2018">2018</a></li>
+              <li><a href="javascript:void(0)" data-target="#2019">2019</a></li>
+              <li><a href="javascript:void(0)" data-target="#2020">2020</a></li>
+              <li>
+                <a href="javascript:void(0)" data-target="#2021" class="active"
+                  >2021</a
+                >
+              </li>
+              <li><a href="javascript:void(0)" data-target="#2022">2022</a></li>
+            </ul>
+            <div class="right" id="2018">
+              <div class="yearscontent">
+                <p><img src="img/tab.png" /></p>
+                <div class="half">
+                  <h3>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                    porta sodales leo vitae vestibulum. Nullam vel posuere nisi.
+                    Donec in lobortis arcu.
+                  </p>
+                  <p class="flex"><a href="#contact-us" class="btnblue">Contact us</a></p>
+                </div>
+                <div class="half">
+                  <div class="counter">
+                    <div>
+                    <p class="big">28</p>
+                    <p>Lorem Ipsum</p>
+                  </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="right" id="2019">
-            <div class="yearscontent">
-              <p><img src="img/a.jpg" /></p>
-              <div class="half">
-                <h3>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h3>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  temporibus asperiores id quia, est ipsa earum odio explicabo
-                  excepturi similique, nihil architecto. Id, cum? Odit maxime
-                  eligendi fugiat eum nam!
-                </p>
-                <a href="#contact-us">Contact us</a>
-              </div>
-              <div class="half">
-                <div class="counter">
-                  <p class="big">28</p>
-                  <p>Lorem Isum</p>
+            <div class="right" id="2019">
+              <div class="yearscontent">
+                <p><img src="img/tab.png" /></p>
+                <div class="half">
+                  <h3>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                    porta sodales leo vitae vestibulum. Nullam vel posuere nisi.
+                    Donec in lobortis arcu.
+                  </p>
+                  <p class="flex"><a href="#contact-us" class="btnblue">Contact us</a></p>
+                </div>
+                <div class="half">
+                  <div class="counter">
+                    <div>
+                    <p class="big">28</p>
+                    <p>Lorem Ipsum</p>
+                  </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="right" id="2020">
-            <div class="yearscontent">
-              <p><img src="img/a.jpg" /></p>
-              <div class="half">
-                <h3>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h3>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  temporibus asperiores id quia, est ipsa earum odio explicabo
-                  excepturi similique, nihil architecto. Id, cum? Odit maxime
-                  eligendi fugiat eum nam!
-                </p>
-                <a href="#contact-us">Contact us</a>
-              </div>
-              <div class="half">
-                <div class="counter">
-                  <p class="big">28</p>
-                  <p>Lorem Isum</p>
+            <div class="right" id="2020">
+              <div class="yearscontent">
+                <p><img src="img/tab.png" /></p>
+                <div class="half">
+                  <h3>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                    porta sodales leo vitae vestibulum. Nullam vel posuere nisi.
+                    Donec in lobortis arcu.
+                  </p>
+                  <p class="flex"><a href="#contact-us" class="btnblue">Contact us</a></p>
+                </div>
+                <div class="half">
+                  <div class="counter">
+                    <div>
+                    <p class="big">28</p>
+                    <p>Lorem Ipsum</p>
+                  </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="right show" id="2021">
-            <div class="yearscontent">
-              <p><img src="img/a.jpg" /></p>
-              <div class="half">
-                <h3>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h3>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  temporibus asperiores id quia, est ipsa earum odio explicabo
-                  excepturi similique, nihil architecto. Id, cum? Odit maxime
-                  eligendi fugiat eum nam!
-                </p>
-                <a href="#contact-us">Contact us</a>
-              </div>
-              <div class="half">
-                <div class="counter">
-                  <p class="big">28</p>
-                  <p>Lorem Isum</p>
+            <div class="right show" id="2021">
+              <div class="yearscontent">
+                <p><img src="img/tab.png" /></p>
+                <div class="half">
+                  <h3>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                    porta sodales leo vitae vestibulum. Nullam vel posuere nisi.
+                    Donec in lobortis arcu.
+                  </p>
+                  <p class="flex"><a href="#contact-us" class="btnblue">Contact us</a></p>
+                </div>
+                <div class="half">
+                  <div class="counter">
+                    <div>
+                    <p class="big">28</p>
+                    <p>Lorem Ipsum</p>
+                  </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="right" id="2022">
-            <div class="yearscontent">
-              <p><img src="img/a.jpg" /></p>
-              <div class="half">
-                <h3>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h3>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  temporibus asperiores id quia, est ipsa earum odio explicabo
-                  excepturi similique, nihil architecto. Id, cum? Odit maxime
-                  eligendi fugiat eum nam!
-                </p>
-                <a href="#contact-us">Contact us</a>
-              </div>
-              <div class="half">
-                <div class="counter">
-                  <p class="big">28</p>
-                  <p>Lorem Isum</p>
+            <div class="right" id="2022">
+              <div class="yearscontent">
+                <p><img src="img/tab.png" /></p>
+                <div class="half">
+                  <h3>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </h3>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo temporibus asperiores id quia, est ipsa earum odio
+                    explicabo excepturi similique, nihil architecto. Id, cum?
+                    Odit maxime eligendi fugiat eum nam!
+                  </p>
+                  <p class="flex"><a href="#contact-us" class="btnblue">Contact us</a></p>
+                </div>
+                <div class="half">
+                  <div class="counter">
+                    <div>
+                    <p class="big">28</p>
+                    <p>Lorem Ipsum</p>
+                  </div>
+                  </div>
                 </div>
               </div>
             </div>

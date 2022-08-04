@@ -39,10 +39,10 @@
 @font-face {
     font-family: 'SF Pro Display';
     font-weight: 400;
-    src: url('sfprodisplayregular-webfont.eot');
-    src: url('sfprodisplayregular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('sfprodisplayregular-webfont.woff2') format('woff2'),
-         url('sfprodisplayregular-webfont.woff') format('woff');
+    src: url('../font/sfprodisplayregular-webfont.eot');
+    src: url('../font/sfprodisplayregular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/sfprodisplayregular-webfont.woff2') format('woff2'),
+         url('../font/sfprodisplayregular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 

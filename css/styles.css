@@ -98,8 +98,9 @@ h1 {
   line-height: 100px;
   letter-spacing: -1px;
 }
-.mt110{
+.scrollbtn {
   margin-top: 110px;
+  margin-bottom: 80px;
 }
 .scrolldownbtn span {
   padding-left: 16px;
@@ -108,7 +109,7 @@ h1 {
   line-height: 24px;
   color: #8b8b8b;
 }
-.scrolldownbtn>*{
+.scrolldownbtn > * {
   vertical-align: middle;
 }
 
@@ -123,7 +124,6 @@ h1 {
   padding: 12px 0 0 0;
 }
 
-
 .topnav-right a {
   color: #ffffff;
   padding: 20px 44px;
@@ -134,17 +134,13 @@ h1 {
 .inverted {
   display: none;
 }
-@media only screen and (max-width: 767px) {
-  /* .topnav-left.show a{
-    position: absolute;
-    left: 0;
-    z-index: 2;
-  }
-  .topnav-left.show a.btnmenu{
-    left: auto;
-    right: 0;
-  } */
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  .topnav-centered a{
+    padding:14px 16px;
+    transition: 2s;
+  }  
 }
+
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
@@ -191,28 +187,33 @@ h1 {
     float: right;
   }
   .container {
+    padding: 0 72px;
+  }
+  .content-inner{
+    margin: 0 auto;
     width: 100%;
     max-width: 1170px;
-    margin: 0 auto;
   }
   .about .right:nth-child(1) {
     padding-left: 30%;
     width: 100%;
   }
   .about .right {
-    width: 70%;
+    width: calc(100% - 200px);
   }
   .about .left {
-    width: 30%;
+    width: 200px;
   }
   .about .left a {
     display: block;
-    padding: 20px 10px;
+    padding: 45px 10px;
   }
   .about .left li > a.active::after {
-    content: "a";
+    content: url("../img/point_line.png");
+    width: 130px;
+    height: 16px;
     position: absolute;
-    padding-left: 20%;
+    padding-left: 44px;
   }
   .about > * {
     float: left;
@@ -223,4 +224,109 @@ h1 {
   #tabs .right.show {
     display: block;
   }
+}
+
+.section2 {
+  padding-top: 168px;
+  background-image: url(../img/bg-section-2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.flex {
+  display: flex;
+}
+.logo {
+  width: 17%;
+}
+.sub-h2 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.sub-h2 span {
+  padding-right: 24px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #8b8b8b;
+}
+h2{
+  margin-top: 24px;
+  margin-bottom: 94px;
+  font-weight: 700;
+font-size: 64px;
+line-height: 72px;
+color: #FFFFFF;
+}
+.about .left li a{
+  padding-left: 68px;
+  background-image: url("../img/line.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto 4px;
+  font-weight: 600;
+font-size: 18px;
+line-height: 24px;
+color: rgba(255, 255, 255, 0.6);
+}
+.yearscontent .half{
+  float: left;
+  width: 50%;
+  margin-top: 169px;
+}
+
+.yearscontent .half + .half{
+margin-top: 128px;
+}
+.half h3{
+  font-weight: 700;
+font-size: 32px;
+line-height: 40px;
+letter-spacing: -0.5px;
+color: #FFFFFF;
+margin-bottom: 40px;
+}
+.half h3:before{
+  content:url("../img/v-line.png");
+  position: absolute;
+  margin-left:-200px;
+}
+.half>p{
+  font-weight: 400;
+font-size: 18px;
+line-height: 32px;
+color: #8B8B8B;
+margin-bottom: 40px;
+}
+.counter{
+  position: relative;
+  float: right;
+  background: #232340;
+  width: 402px;
+  height: 402px;
+  border-radius: 50%;
+  box-shadow: 0px 23px 50px rgb(0 0 0 / 25%);
+}
+.counter>div{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.counter p{
+  font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+letter-spacing: -0.2px;
+color: #FFFFFF;
+}
+.counter .big{
+  font-weight: 600;
+font-size: 200px;
+line-height: 239px;
+text-align: center;
+letter-spacing: normal;
+color: #FFFFFF;
 }
