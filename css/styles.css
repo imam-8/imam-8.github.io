@@ -793,8 +793,10 @@ line-height: 18px;
   color: #5468e7;
 }
 .social-area * {
-  display: inline-block;
   vertical-align: middle;
+}
+.social-area > *{
+  display: inline-block;
 }
 .social-area a {
   margin-left: 40px;
