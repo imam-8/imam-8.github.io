@@ -51,6 +51,10 @@ body {
 .topnav a.btnmenu {
   float: right;
 }
+
+.section6 .text p img{
+  vertical-align: middle;
+}
 .content {
   padding-top: 40px;
 }
@@ -789,6 +793,7 @@ line-height: 18px;
   color: #5468e7;
 }
 .social-area * {
+  display: inline-block;
   vertical-align: middle;
 }
 .social-area a {
