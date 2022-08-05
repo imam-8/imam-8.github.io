@@ -44,6 +44,21 @@ $(document).ready(function () {
   var selecteditem = 0;
   var total = 0;
   var tabctrl = $(".tabctrl");
+  var menulist = $(".menu-list a");
+  var option2 ="";
+  menulist.each(function(){
+    var target = $(this).attr("href");
+    var label  = $(this).html();
+    option2 += "<option value='" + target + "'>" + label + "</option>";
+  })
+  var menuselect = $(".menuselect")
+  menuselect.html(option2);
+  menuselect.on("change",function(){
+    var target = $(this).val();
+    $('html, body').animate({
+      scrollTop: $("div"+target).offset().top
+    },300);
+  });
   tabctrl.each(function (index) {
     var target = $(this).attr("data-target");
     var label = $(this).html();

@@ -9,14 +9,10 @@
     <title>folio.</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="icon" href="img/favicon.png" type="image/icon type" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/script.js"></script>
     <style>
-      .section4, .section5 ,.section6 ,.section7, .footer-section {
+      .section7, .footer-section {
         display: none;
       }
     </style>
@@ -45,7 +41,7 @@
       <div class="topnav-centered mobile-container" style="display: none">
         <a href="#about" class="active">About</a>
         <a href="#work">Work</a>
-        <a href="#service">Service</a>
+        <a href="#services">Service</a>
         <a href="#jobs">Jobs</a>
       </div>
       <!-- Right-aligned links -->
@@ -276,7 +272,7 @@
     <div class="section3" id="work">
       <div class="container">
         <div class="content-inner cf">
-          <div class="left">
+          <div class="left sp-none">
             <p>
               <img
                 src="img/logo_symbol.png"
@@ -288,10 +284,10 @@
           </div>
           <div class="right">
             <p class="sub-h2 invert"><span>02</span> You may also like</p>
-            <h2 class="invert">
-              We make deisgn that <br />
-              Lead and Inspire.
-            </h2>
+            <h2 class="invert">Recent Works.</h2>
+            <p class="sub-texts">
+              Agency is a full-service agency, busy designing and building beautiful digital products, brands, and experiences.
+            </p>
             <div class="card-container">
               <div class="card-item">
                 <p class="label">Featured Product</p>
@@ -325,14 +321,17 @@
                 </a>
               </div>
             </div>
+            <div class="flex">
+              <a href="#contact-us" class="btnblue sp">Contact us</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="section4" id="service">
+    <div class="section4" id="services">
       <div class="container">
         <div class="content-inner cf">
-          <div class="col left">
+          <div class="col left sp-none">
             <img src="img/logo_symbol.png" alt="logo" height="24" width="24" />
           </div>
           <div class="col right">
@@ -405,7 +404,7 @@
     <div class="section5" id="jobs">
       <div class="container">
         <div class="content-inner cf">
-          <div class="col left">
+          <div class="col left sp-none">
             <img src="img/logo_symbol.png" alt="logo" height="24" width="24" />
           </div>
           <div class="col mid">
@@ -416,7 +415,7 @@
               and building beautiful digital products, brands, <br />
               and experiences.
             </p>
-            <div class="download">
+            <div class="download sp-none">
               <a href="#" class="arrowdown">
                 <img src="img/arrowlink.png" alt="" />
                 <span>Available<br />jobs</span>
@@ -424,7 +423,7 @@
             </div>
           </div>
           <div class="col right">
-            <a href="#" class="job-card">
+            <a href="javascript:void(0)" class="job-card">
               <p class="job-title">
                 Graphic Designer<span><span>2</span></span>
               </p>
@@ -437,7 +436,7 @@
                 <img src="img/imgcard.png" />
               </p>
             </a>
-            <a href="#" class="job-card">
+            <a href="javascript:void(0)" class="job-card">
               <p class="job-title">Visual Designer</p>
               <p class="jobexp">2 years experience</p>
               <p>
@@ -448,7 +447,7 @@
                 <img src="img/imgcard.png" />
               </p>
             </a>
-            <a href="#" class="job-card">
+            <a href="javascript:void(0)" class="job-card">
               <p class="job-title">Art Director</p>
               <p class="jobexp">2 years experience</p>
               <p>
@@ -459,7 +458,7 @@
                 <img src="img/imgcard.png" />
               </p>
             </a>
-            <a href="#" class="job-card">
+            <a href="javascript:void(0)" class="job-card">
               <p class="job-title">Web Designer</p>
               <p class="jobexp">2 years experience</p>
               <p>
@@ -477,7 +476,8 @@
     <div class="container" id="contact-us">
       <div class="content-inner">
         <div class="section6">
-          <div>
+          <p class="sp chat"><img src="img/speechbubble.png" width="73" height="73" /></p>
+          <div class="sp-none">
             <p>
               <img
                 src="img/logo_symbol.png"
@@ -501,17 +501,22 @@
               <p class="sub-title">Let’s talk about your next project</p>
             </div>
             <div class="col2">
-              <p><img src="img/speechbubble.png" width="103" height="103" /></p>
-              <a href="#" class="flex">
+              <p class="sp-none"><img src="img/speechbubble.png" width="103" height="103" /></p>
+              <a href="#" class="flex sp-none">
                 <p>Invest in your designs today!</p>
                 <p><img src="img/stroke-white.png" width="64" height="64" /></p>
               </a>
+              <div class="contact sp">
+                <div class="flex">
+                  <a href="#contact-us" class="btnblue">Contact us</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container footer-bg">
       <div class="content-inner">
         <div class="section-footer">
           <div class="footer-content">
@@ -527,6 +532,7 @@
               </p>
             </div>
             <div class="footer-menu">
+              <select class="menuselect sp">forsp</select>
               <div class="menu-list">
                 <a href="#about" class="active">About</a>
                 <a href="#work">Work</a>
@@ -536,15 +542,25 @@
             </div>
           </div>
           <div class="copyright-area cf">
+            <div class="social-area cf">
+              <p>Follow us</p>
+              <a href="#facebook">
+                <img src="img/logo-facebook.png" class="pc">
+                <img src="img/logo-facebook-sp.png" class="sp">
+              </a>
+              <a href="#youtube">
+                <img src="img/logo-youtube.png" class="pc">
+                <img src="img/logo-youtube-sp.png" class="sp">
+              </a>
+              <a href="#instagram">
+                <img src="img/logo-instagram.png" class="pc">
+                <img src="img/logo-instagram-sp.png" class="sp">
+              </a>
+            </div>
             <div class="copy-right">
               <p>&copy; 2020, UI8 LLC.</p>
             </div>
-            <div class="social-area">
-              <p>Follow us</p>
-              <a href="#facebook"><img src="img/logo-facebook.png"></a>
-              <a href="#youtube"><img src="img/logo-youtube.png"></a>
-              <a href="#instagram"><img src="img/logo-instagram.png"></a>
-            </div>
+            
           </div>
         </div>
       </div>
