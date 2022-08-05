@@ -15,6 +15,11 @@
     />
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/script.js"></script>
+    <style>
+      .section3, .section4, .section5 ,.section6 ,.section7, .footer-section {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <!-- Top navigation -->
@@ -22,17 +27,18 @@
       <!-- Left-aligned links (default) -->
       <div class="topnav-left">
         <a href="#">
-          <img src="img/logo.png" width="159" height="40" alt="folio." />
+          <img src="img/logo.png" width="159" height="40" alt="folio." class="open"/>
           <img
             src="img/logo-b.png"
             width="159"
             height="40"
             alt="folio."
-            class="inverted"
+            class="inverted close"
           />
         </a>
         <a href="javascript:void(0)" class="sm btnmenu">
-          <i class="fa fa-bars"></i>
+          <img src="img/open.png" class="open">
+          <img src="img/close.png" class="close">
         </a>
       </div>
       <!-- Centered link -->
@@ -46,8 +52,13 @@
       <div class="topnav-right pc">
         <a href="#contact-us">Contact Us</a>
       </div>
+      <div class="bottom-nav">
+        <a href="#facebook"><img src="img/icon-facebook.png"></a>
+        <a href="#youtube"><img src="img/icon-youtube.png"></a>
+        <a href="#instagram"><img src="img/icon-instagram.png"></a>
+      </div>
     </div>
-    <div class="container">
+    <div class="container" id="home">
       <div class="content-inner">
         <div class="mv">
           <div class="mv-detail">
@@ -57,31 +68,32 @@
             </h1>
             <p class="desc">
               Agency is a full-service agency, busy designing
-              <br />
-              and building beautiful digital products, brands, <br />and
+              <br class="pc"/>
+              and building beautiful digital products, brands, <br class="pc"/>and
               experiences.
             </p>
-            <p class="mt48 flex">
+            <p class="mt48 spmt24 flex">
               <a href="#work" class="btnblue">Recent Work</a>
-            </p>
-            <p class="scrollbtn">
-              <a href="#" class="scrolldownbtn">
-                <img src="img/arrowscroll.png" alt="arrowscroll" />
-                <span>Scroll down</span>
-              </a>
             </p>
           </div>
           <div class="mv-image">
-            <img src="img/mv.png" alt="3d + wait" />
+            <img src="img/mv.png" alt="3d + wait" class="pc"/>
+            <img src="img/mv_sp.png" alt="3d + wait" class="sp"/>
           </div>
+          <p class="scrollbtn">
+            <a href="#" class="scrolldownbtn">
+              <img src="img/arrowscroll.png" alt="arrowscroll" />
+              <span>Scroll down</span>
+            </a>
+          </p>
         </div>
       </div>
     </div>
-    <div class="section2">
+    <div class="section2" id="about">
       <div class="container">
         <div class="content-inner">
           <div class="about cf">
-            <div class="logo">
+            <div class="logo sp-none">
               <img
                 src="img/logo_symbol.png"
                 alt="logo"
@@ -98,16 +110,29 @@
             </div>
           </div>
           <div class="about years cf" id="tabs">
+            <div class="sp tabsp">
+              <a class="prevTab" href="javascript:void(0)">
+                <img src="img/left-normal.png" width="48" height="48" class="disable" />
+                <img src="img/left-hover.png" width="48" height="48" class="enable" />
+              </a>
+              <a class="nextTab" href="javascript:void(0)">
+                <img src="img/right-normal.png" width="48" height="48" class="disable" />
+                <img src="img/right-hover.png" width="48" height="48" class="enable" />
+              </a>
+              <select class="change">
+                
+              </select>
+            </div>
             <ul class="left">
-              <li><a href="javascript:void(0)" data-target="#2018">2018</a></li>
-              <li><a href="javascript:void(0)" data-target="#2019">2019</a></li>
-              <li><a href="javascript:void(0)" data-target="#2020">2020</a></li>
+              <li><a href="javascript:void(0)" data-target="#2018" class="tabctrl">2018</a></li>
+              <li><a href="javascript:void(0)" data-target="#2019" class="tabctrl">2019</a></li>
+              <li><a href="javascript:void(0)" data-target="#2020" class="tabctrl">2020</a></li>
               <li>
-                <a href="javascript:void(0)" data-target="#2021" class="active"
+                <a href="javascript:void(0)" data-target="#2021" class="tabctrl active"
                   >2021</a
                 >
               </li>
-              <li><a href="javascript:void(0)" data-target="#2022">2022</a></li>
+              <li><a href="javascript:void(0)" data-target="#2022" class="tabctrl">2022</a></li>
             </ul>
             <div class="right" id="2018">
               <div class="yearscontent">
@@ -243,7 +268,7 @@
         </div>
       </div>
     </div>
-    <div class="section3">
+    <div class="section3" id="work">
       <div class="container">
         <div class="content-inner cf">
           <div class="left">
@@ -257,7 +282,7 @@
             </p>
           </div>
           <div class="right">
-            <p class="sub-h2 invert"><span>01</span> Who are We</p>
+            <p class="sub-h2 invert"><span>02</span> You may also like</p>
             <h2 class="invert">
               We make deisgn that <br />
               Lead and Inspire.
@@ -299,6 +324,227 @@
         </div>
       </div>
     </div>
+    <div class="section4" id="service">
+      <div class="container">
+        <div class="content-inner cf">
+          <div class="col left">
+            <img src="img/logo_symbol.png" alt="logo" height="24" width="24" />
+          </div>
+          <div class="col right">
+            <p class="sub-h2"><span>03</span> Folio Agency</p>
+            <h2>
+              We make deisgn that <br />
+              Lead and Inspire.
+            </h2>
+            <div class="price-container">
+              <div class="price-item">
+                <p class="price">40<span>+</span></p>
+                <p class="price-title"><span>Scene Objects</span> <img src="img/smiley.png"></p>
+                <p class="price-detail">
+                  Bento is the first fully editable, 3D visual design system
+                  with global auto-updatable style guides built right in Figma.
+                </p>
+                <div class="download">
+                  <a href="#" class="arrowdown">
+                    <img src="img/arrowdown.png" alt="" />
+                    <span>Download</span>
+                  </a>
+                </div>
+              </div>
+              <div class="price-item">
+                <p class="price">20</p>
+                <p class="price-title">
+                  <span>Pre-build Scenes</span> <img src="img/fire.png">
+                </p>
+                <p class="price-detail">
+                  Bento is the first fully editable, 3D visual design system
+                  with global auto-updatable style guides built right in Figma.
+                </p>
+                <div class="download">
+                  <a href="#" class="arrowdown">
+                    <img src="img/arrowdown.png" alt="" />
+                    <span>Download</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-inner cf slidecenter">
+          <div class="slideshow-container">
+            <div class="mySlide fade">
+              <img src="img/slide_pre.png" alt="" />
+            </div>
+            <div class="mySlide fade">
+              <img src="img/slide_1.png" alt="" />
+            </div>
+            <div class="mySlide fade">
+              <img src="img/slide_2.png" alt="" />
+            </div>
+            <div class="mySlide fade">
+              <img src="img/slide_3.png" alt="" />
+            </div>
+            <div class="mySlide fade">
+              <img src="img/slide_4.png" alt="" />
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">
+              <img src="img/arrowleft.png" width="64" height="64" />
+            </a>
+            <a class="next" onclick="plusSlides(1)">
+              <img src="img/arrowright.png" width="64" height="64" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section5" id="jobs">
+      <div class="container">
+        <div class="content-inner cf">
+          <div class="col left">
+            <img src="img/logo_symbol.png" alt="logo" height="24" width="24" />
+          </div>
+          <div class="col mid">
+            <p class="sub-h2 invert"><span>04</span> We are hiring</p>
+            <h2 class="invert">Jobs</h2>
+            <p>
+              Agency is a full-service agency, busy designing<br />
+              and building beautiful digital products, brands, <br />
+              and experiences.
+            </p>
+            <div class="download">
+              <a href="#" class="arrowdown">
+                <img src="img/arrowlink.png" alt="" />
+                <span>Available<br />jobs</span>
+              </a>
+            </div>
+          </div>
+          <div class="col right">
+            <a href="#" class="job-card">
+              <p class="job-title">
+                Graphic Designer<span><span>2</span></span>
+              </p>
+              <p class="jobexp">2 years experience</p>
+              <p>
+                <img src="img/arrowblue.png" class="blue" />
+                <img src="img/arrowwhite.png" class="hide" />
+              </p>
+              <p class="jobimg">
+                <img src="img/imgcard.png" />
+              </p>
+            </a>
+            <a href="#" class="job-card">
+              <p class="job-title">Visual Designer</p>
+              <p class="jobexp">2 years experience</p>
+              <p>
+                <img src="img/arrowblue.png" class="blue" />
+                <img src="img/arrowwhite.png" class="hide" />
+              </p>
+              <p class="jobimg">
+                <img src="img/imgcard.png" />
+              </p>
+            </a>
+            <a href="#" class="job-card">
+              <p class="job-title">Art Director</p>
+              <p class="jobexp">2 years experience</p>
+              <p>
+                <img src="img/arrowblue.png" class="blue" />
+                <img src="img/arrowwhite.png" class="hide" />
+              </p>
+              <p class="jobimg">
+                <img src="img/imgcard.png" />
+              </p>
+            </a>
+            <a href="#" class="job-card">
+              <p class="job-title">Web Designer</p>
+              <p class="jobexp">2 years experience</p>
+              <p>
+                <img src="img/arrowblue.png" class="blue" />
+                <img src="img/arrowwhite.png" class="hide" />
+              </p>
+              <p class="jobimg">
+                <img src="img/imgcard.png" />
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="contact-us">
+      <div class="content-inner">
+        <div class="section6">
+          <div>
+            <p>
+              <img
+                src="img/logo_symbol.png"
+                alt="logo"
+                height="24"
+                width="24"
+              />
+            </p>
+          </div>
+          <div class="text">
+            <p><img src="img/handshake.png" /> Say hello</p>
+          </div>
+          <div class="title">
+            <h2>
+              A design team building a curated marketplace for UI designers.
+            </h2>
+          </div>
+          <hr class="devider" />
+          <div class="cf">
+            <div class="col2">
+              <p class="sub-title">Let’s talk about your next project</p>
+            </div>
+            <div class="col2">
+              <p><img src="img/speechbubble.png" width="103" height="103" /></p>
+              <a href="#" class="flex">
+                <p>Invest in your designs today!</p>
+                <p><img src="img/stroke-white.png" width="64" height="64" /></p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content-inner">
+        <div class="section-footer">
+          <div class="footer-content">
+            <div class="logo-bottom">
+              <p>
+                <img src="img/light-mode.png" alt="folio." />
+              </p>
+            </div>
+            <div class="about-text">
+              <p>
+                Agency is a full-service agency, busy designing and building
+                beautiful digital products, brands, and experiences.
+              </p>
+            </div>
+            <div class="footer-menu">
+              <div class="menu-list">
+                <a href="#about" class="active">About</a>
+                <a href="#work">Work</a>
+                <a href="#services">Services</a>
+                <a href="#jobs">Jobs</a>
+              </div>
+            </div>
+          </div>
+          <div class="copyright-area cf">
+            <div class="copy-right">
+              <p>&copy; 2020, UI8 LLC.</p>
+            </div>
+            <div class="social-area">
+              <p>Follow us</p>
+              <a href="#facebook"><img src="img/logo-facebook.png"></a>
+              <a href="#youtube"><img src="img/logo-youtube.png"></a>
+              <a href="#instagram"><img src="img/logo-instagram.png"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- end content -->
+    <script src="js/slide.js"></script>
   </body>
 </html>
