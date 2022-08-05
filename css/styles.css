@@ -12,6 +12,9 @@ body {
 .overlay {
   overflow: hidden;
 }
+.sp{
+  display: none;
+}
 .topnav a {
   float: left;
   color: #8b8b8b;
@@ -817,6 +820,7 @@ html {
     width: auto;
   }
   .topnav {
+    z-index: 1;
     padding: 52px 0px 44px 0px;
   }
   .topnav-left {
@@ -953,6 +957,7 @@ font-size: 40px;
 line-height: 48px;
 letter-spacing: -0.4px;
 color: #FFFFFF;
+margin-bottom: 32px;
   }
   .selactive .enable{
     display: block;
@@ -960,6 +965,8 @@ color: #FFFFFF;
   .selactive .disable{
     display: none;
   }
+  .disable{display: block;}
+  .enable{display: none;}
   .tabsp>*{
     float: left;
   }
@@ -977,5 +984,84 @@ color: #FFFFFF;
 font-size: 12px;
 line-height: 16px;
 color: #FFFFFF;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+background-color: #232340;
+border: none;
+background-image: url("../img/arrowselect.png");
+background-repeat: no-repeat;
+background-position: right center;
   }
+  .tabsp{
+    margin-bottom: 56px;
+  }
+  select::-ms-expand {
+    display: none;
+}
+.section2{
+  padding-top: 64px;
+  background-image: none;
+  background-color: #232340;
+}
+.yearscontent>p{
+  margin-right: -32px;
+  margin-left: -32px;
+}
+.yearscontent>p img{
+  width:100%;
+}
+.yearscontent .half{
+  float: none;
+  width: 100%;
+  margin-top: 56px;
+}
+.half h3{
+  font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+letter-spacing: -0.2px;
+color: #FFFFFF;
+}
+.half>p{
+  font-weight: 400;
+font-size: 16px;
+line-height: 28px;
+color: #8B8B8B;
+margin-bottom: 32px;
+}
+#tabs .right.show{
+  display: block;
+}
+#tabs .right{
+  display: none;
+}
+.yearscontent .half + .half{
+  margin-top: 56px;
+  display: flex;
+  justify-content: center;
+}
+.sp{display: block;}
+.about.years{padding-bottom: 64px;}
+.half h3:before{
+  display: none;
+}
+.counter{
+  width: 310px;
+  height: 310px;
+}
+.counter .big{
+  font-weight: 600;
+font-size: 140px;
+line-height: 167px;
+text-align: center;
+color: #FFFFFF;
+}
+.counter p{
+  font-weight: 600;
+font-size: 18px;
+line-height: 24px;
+text-align: center;
+color: #FFFFFF;
+}
 }
