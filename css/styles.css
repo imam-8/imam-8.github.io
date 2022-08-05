@@ -970,6 +970,7 @@ html {
   }
   .topnav.show, .show.topnav.fixed-top{
     z-index: 1;
+    overflow-y: auto;
   }
   .section2 h2{
     max-width: 225px;
