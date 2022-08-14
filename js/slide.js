@@ -15,6 +15,7 @@ let slideIndex = 0;
       slides[i].style.display = "none";
     }
     slideIndex++;
+    console.log(slideIndex);
     if (slideIndex > slides.length) {
       slideIndex = 1;
     }
