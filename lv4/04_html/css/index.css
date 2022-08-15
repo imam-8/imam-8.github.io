@@ -83,7 +83,7 @@ body{
     transform: translateX(-50%);
 }
 .mainVisual .bgVisual{
-	background-image: url("../img/bg_mainVisual.jpg");
+	background-image: url("../img/bg_mainvisual.jpg");
 	background-size: 320px 190px;
 	background-repeat: no-repeat;
 	background-position: center;
