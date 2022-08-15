@@ -115,10 +115,11 @@ body{
 .mainVisual .btn{
 	display: inline-block;
     margin-top: 50px;
+	padding:12.5px 30px 12.5px 20px;
 }
 .btn{
 	display: block;
-	padding:12.5px 30px 12.5px 20px;
+	padding:12.5px 30px 12.5px 30px;
 	background-color:#d0102c;
 	color:#fff;
 	font-size: 0.875em;
