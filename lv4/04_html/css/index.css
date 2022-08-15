@@ -143,7 +143,7 @@ h2{
 	margin-top: 15px;
 	background-color: #fff;
 	border:1px solid #c0c0c0;
-	width: calc(100% - 25px);
+	width: calc(100% - 27px);
 	color:#2c2c2c;
 	font-size: 0.875em;
 	padding:12.5px;
@@ -297,6 +297,12 @@ h2{
 
 .slick-dots li{
 	margin: 0 5px;
+	width: 10px;
+	height: 10px;
+}
+.slick-dots li button{
+	width: 10px;
+	height: 10px;
 }
 .slick-dotted.slick-slider{
 	margin-bottom: 40px;
