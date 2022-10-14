@@ -1,1 +1,0 @@
-https://stackoverflow.com/questions/68052997/multiple-sliders-in-one-page-website-with-javascript
