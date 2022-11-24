@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/jquery-3.6.0.js"></script>
+    </head>
+    <body>
+        <p>
+            <a href="#" class="omv" data-image="https://upload.wikimedia.org/wikipedia/en/c/cd/SealOnlineUSA_Logo.jpg">Seal online</a><br>
+            <a href="#" class="omv" data-image="https://cdn.medcom.id/images/content/2019/08/12/1052191/7rCsiw8QFO.jpg">Ragnarok</a>
+        </p>
+        <div class="mouseov">
+            <img>
+        </div>
+        <script>
+            $(".omv").on('mouseover',function(){
+                let img = $(this).attr("data-image");
+                $('.mouseov img').attr("src",img);
+            }).on('mouseout',function(){
+                $('.mouseov img').attr("src","");
+            });
+        </script>
+    </body>
+
+</html>
