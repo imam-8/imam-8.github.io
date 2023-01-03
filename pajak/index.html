@@ -21,9 +21,41 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <style>
+      .currency {
+        text-align: right;
+      }
+      .plusIcon {
+        content: " ";
+        width: 10px;
+        height: 10px;
+        display: block;
+      }
+      .plusIcon:before,
+      .plusIcon:after {
+        transition: 1s;
+        position: absolute;
+        margin-top: 5px;
+        content: " ";
+        width: 10px;
+        height: 2px;
+        background-color: #fff;
+        color: #fff;
+        display: block;
+      }
+      a[aria-expanded="false"] > .plusIcon::after {
+        rotate: 90deg;
+      }
+      a[aria-expanded="true"] > .plusIcon::after {
+        rotate: 0deg;
+      }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: rgba(0, 0, 0, 0.05) !important">
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary"
+      style="background-color: rgba(0, 0, 0, 0.05) !important"
+    >
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Perhitungan pajak online</a>
         <button
@@ -60,7 +92,8 @@
             <span class="input-group-text">Rp</span>
             <input
               type="text"
-              class="form-control"
+              id="incomePerMonth"
+              class="form-control currency"
               aria-label="Amount (to the nearest dollar)"
             />
           </div>
@@ -74,8 +107,9 @@
           <div class="input-group">
             <span class="input-group-text">Rp</span>
             <input
+              id="incomePerYear"
               type="text"
-              class="form-control"
+              class="form-control currency"
               aria-label="Amount (to the nearest dollar)"
             />
           </div>
@@ -95,7 +129,7 @@
             >
               Category PTKP
             </button>
-            <ul class="dropdown-menu dropdown-menu-end">
+            <ul class="dropdown-menu dropdown-menu-end" id="ptkp">
               <li>
                 <a class="dropdown-item" href="#" data-ptkp="54000000"
                   >Tidak Kawin / 0 Tanggungan</a
@@ -161,8 +195,9 @@
             </ul>
             <span class="input-group-text">Rp</span>
             <input
+              id="ptkpval"
               type="text"
-              class="form-control"
+              class="form-control currency"
               aria-label="Text input with dropdown button"
               disabled
             />
@@ -178,7 +213,7 @@
             <span class="input-group-text">Rp</span>
             <input
               type="text"
-              class="form-control"
+              class="form-control currency"
               aria-label="Amount (to the nearest dollar)"
               disabled
             />
@@ -187,24 +222,18 @@
       </div>
       <div class="row mt-2">
         <div class="col-8">
-          <p>PPH 21 Total</p>
-        </div>
-        <div class="col-4">
-          <div class="input-group">
-            <span class="input-group-text">Rp</span>
-            <input
-              type="text"
-              class="form-control"
-              aria-label="Amount (to the nearest dollar)"
-              disabled
-            />
-          </div>
-        </div>
-      </div>
-      <div class="row mt-2">
-        <div class="col-8">
-          <p class="ps-5">
-            Penghasilan tahunan Rp0 – Rp60.000.000/tahun dikenakan tarif 5%.
+          <p>
+            <a
+              class="btn btn-primary"
+              data-bs-toggle="collapse"
+              href="#pphDetail"
+              role="button"
+              aria-expanded="true"
+              aria-controls="pphDetail"
+            >
+              <span class="plusIcon"></span>
+            </a>
+            PPH 21 Total
           </p>
         </div>
         <div class="col-4">
@@ -212,86 +241,106 @@
             <span class="input-group-text">Rp</span>
             <input
               type="text"
-              class="form-control"
+              class="form-control currency"
               aria-label="Amount (to the nearest dollar)"
               disabled
             />
           </div>
         </div>
       </div>
-      <div class="row mt-2">
-        <div class="col-8">
-          <p class="ps-5">
-            Penghasilan tahunan Rp60.000.000 – Rp250.000.000/tahun dikenakan
-            tarif 15%.
-          </p>
-        </div>
-        <div class="col-4">
-          <div class="input-group">
-            <span class="input-group-text">Rp</span>
-            <input
-              type="text"
-              class="form-control"
-              aria-label="Amount (to the nearest dollar)"
-              disabled
-            />
+      <div class="collapse show" id="pphDetail">
+        <div class="row mt-2">
+          <div class="col-8">
+            <p class="ps-5">
+              Penghasilan tahunan Rp0 – Rp60.000.000/tahun dikenakan tarif 5%.
+            </p>
+          </div>
+          <div class="col-4">
+            <div class="input-group">
+              <span class="input-group-text">Rp</span>
+              <input
+                type="text"
+                class="form-control currency"
+                aria-label="Amount (to the nearest dollar)"
+                disabled
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row mt-2">
-        <div class="col-8">
-          <p class="ps-5">
-            Perpenghasilan tahunan Rp250.000.000 – Rp500.000.000/tahun dikenakan
-            tarif 25%.
-          </p>
-        </div>
-        <div class="col-4">
-          <div class="input-group">
-            <span class="input-group-text">Rp</span>
-            <input
-              type="text"
-              class="form-control"
-              aria-label="Amount (to the nearest dollar)"
-              disabled
-            />
+        <div class="row mt-2">
+          <div class="col-8">
+            <p class="ps-5">
+              Penghasilan tahunan Rp60.000.000 – Rp250.000.000/tahun dikenakan
+              tarif 15%.
+            </p>
+          </div>
+          <div class="col-4">
+            <div class="input-group">
+              <span class="input-group-text">Rp</span>
+              <input
+                type="text"
+                class="form-control currency"
+                aria-label="Amount (to the nearest dollar)"
+                disabled
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row mt-2">
-        <div class="col-8">
-          <p class="ps-5">
-            Penghasilan tahunan Rp500.000.000 – Rp5.000.000.000/tahun dikenakan
-            tarif 30%
-          </p>
-        </div>
-        <div class="col-4">
-          <div class="input-group">
-            <span class="input-group-text">Rp</span>
-            <input
-              type="text"
-              class="form-control"
-              aria-label="Amount (to the nearest dollar)"
-              disabled
-            />
+        <div class="row mt-2">
+          <div class="col-8">
+            <p class="ps-5">
+              Perpenghasilan tahunan Rp250.000.000 – Rp500.000.000/tahun
+              dikenakan tarif 25%.
+            </p>
+          </div>
+          <div class="col-4">
+            <div class="input-group">
+              <span class="input-group-text">Rp</span>
+              <input
+                type="text"
+                class="form-control currency"
+                aria-label="Amount (to the nearest dollar)"
+                disabled
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row mt-2">
-        <div class="col-8">
-          <p class="ps-5">
-            Penghasilan tahunan di atas Rp5.000.000.000/tahun dikenakan tarif
-            35%.
-          </p>
+        <div class="row mt-2">
+          <div class="col-8">
+            <p class="ps-5">
+              Penghasilan tahunan Rp500.000.000 – Rp5.000.000.000/tahun
+              dikenakan tarif 30%
+            </p>
+          </div>
+          <div class="col-4">
+            <div class="input-group">
+              <span class="input-group-text">Rp</span>
+              <input
+                type="text"
+                class="form-control currency"
+                aria-label="Amount (to the nearest dollar)"
+                disabled
+              />
+            </div>
+          </div>
         </div>
-        <div class="col-4">
-          <div class="input-group">
-            <span class="input-group-text">Rp</span>
-            <input
-              type="text"
-              class="form-control"
-              aria-label="Amount (to the nearest dollar)"
-              disabled
-            />
+        <div class="row mt-2">
+          <div class="col-8">
+            <p class="ps-5">
+              Penghasilan tahunan di atas Rp5.000.000.000/tahun dikenakan tarif
+              35%.
+            </p>
+          </div>
+          <div class="col-4">
+            <div class="input-group">
+              <span class="input-group-text">Rp</span>
+              <input
+                type="text"
+                class="form-control currency"
+                aria-label="Amount (to the nearest dollar)"
+                disabled
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -304,7 +353,7 @@
             <span class="input-group-text">Rp</span>
             <input
               type="text"
-              class="form-control"
+              class="form-control currency"
               aria-label="Amount (to the nearest dollar)"
               disabled
             />
@@ -320,7 +369,7 @@
             <span class="input-group-text">Rp</span>
             <input
               type="text"
-              class="form-control"
+              class="form-control currency"
               aria-label="Amount (to the nearest dollar)"
               disabled
             />
@@ -328,11 +377,7 @@
         </div>
       </div>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
+
     <footer>
       <!-- Copyright -->
       <div
@@ -346,5 +391,103 @@
       </div>
       <!-- Copyright -->
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let ptkp;
+      let incomePerMonth;
+      let incomePerYear;
+      let pkp;
+      let pph21PerMonth;
+      let incomeAfterTax;
+      // Create a new Intl.NumberFormat object with the desired options
+      const formatter = new Intl.NumberFormat("id-ID", {
+        style: "currency",
+        currency: "IDR",
+        currencyDisplay: "code",
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0,
+      });
+
+      // Get all the input elements with the class "currency"
+      const inputElements = document.querySelectorAll(".currency");
+
+      // Iterate over the input elements and attach an event listener to each element
+      inputElements.forEach((inputElement) => {
+        inputElement.addEventListener("change", (event) => {
+          // Get the value of the input element
+          const inputValue = event.target.value;
+          if (/^\d*$/.test(inputValue)) {
+            const inputId = event.target.id;
+            // The input value is valid, do nothing
+
+            // Format the input value as Indonesian Rupiah and store the result in a variable
+            const formattedValue = formatter.format(inputValue);
+
+            // Set the value of the input element to the formatted value
+            event.target.value = formattedValue;
+
+            // Store the actual data (unformatted value) in a data attribute
+            event.target.setAttribute("data-actual-value", inputValue);
+            
+            if (inputId === "incomePerMonth") {
+              // Calculate the income per year by multiplying the income per month by 12
+              incomePerYear = inputValue* 12;
+              const incomePerYearInput =
+                document.querySelector("#incomePerYear");
+              const formattedincomePerYear = formatter.format(incomePerYear);
+              // Set the value of the "IncomePerYear" input element to the calculated income per year
+              incomePerYearInput.value = formattedincomePerYear;
+              incomePerYearInput.setAttribute(
+                "data-actual-value",
+                incomePerYear
+              );
+            }
+            if (inputId === "incomePerYear") {
+              // Calculate the income per year by multiplying the income per month by 12
+              incomePerMonth = inputValue / 12;
+              const incomePerMonthInput =
+                document.querySelector("#incomePerMonth");
+              const formattedincomePerMonth = formatter.format(incomePerMonth);
+              // Set the value of the "IncomePerYear" input element to the calculated income per year
+              incomePerMonthInput.value = formattedincomePerMonth;
+              incomePerMonthInput.setAttribute(
+                "data-actual-value",
+                incomePerMonth
+              );
+            }
+          } else {
+            // The input value is not valid, set the value to the empty string
+            event.target.value = "";
+          }
+        });
+      });
+      ///////////////////////////////////////////////////////////////
+      // Get the div element with the id "ptkp"
+      const ptkpDiv = document.querySelector("#ptkp");
+
+      // Get all the anchor elements inside the div
+      const anchors = ptkpDiv.querySelectorAll("a");
+
+      // Iterate over the anchor elements and attach a click event handler to each element
+      anchors.forEach((anchor) => {
+        anchor.addEventListener("click", (event) => {
+          // Get the value of the data-ptkp attribute for the clicked anchor element
+          const ptkpValue = event.target.getAttribute("data-ptkp");
+
+          // Get the input element with the id "ptkpval"
+          const ptkpInput = document.querySelector("#ptkpval");
+
+          // Set the value of the input element to the ptkpValue
+
+          const formattedValueptkp = formatter.format(ptkpValue);
+          ptkpInput.value = ptkpValue;
+          ptkp = ptkpValue;
+        });
+      });
+    </script>
   </body>
 </html>
