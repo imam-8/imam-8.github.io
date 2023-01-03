@@ -1,0 +1,350 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="keywords"
+      content="pajak, tax, penghitungan, perhitungan, calculator, online"
+    />
+    <meta name="description" content="Perhitungan pajak online" />
+    <meta name="robots" content="index,follow" />
+    <meta name="url" content="http://imam-8.github.io/pajak/" />
+    <meta name="identifier-URL" content="http://imam-8.github.io/pajak/" />
+    <meta name="og:title" content="Perhitungan pajak online" />
+    <meta name="og:type" content="webpage" />
+    <meta name="og:url" content="http://imam-8.github.io/pajak/" />
+    <meta name="og:description" content="Perhitungan pajak online" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Perhitungan pajak online</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: rgba(0, 0, 0, 0.05) !important">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Perhitungan pajak online</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Type 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Type 2</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mb-5">
+      <!-- Content here -->
+      <div class="row mt-4">
+        <div class="col-8">
+          <p>Penghasilan perbulan</p>
+        </div>
+        <div class="col-4">
+          <div class="input-group">
+            <span class="input-group-text">Rp</span>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Amount (to the nearest dollar)"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-8">
+          <p>Penghasilan pertahun</p>
+        </div>
+        <div class="col-4">
+          <div class="input-group">
+            <span class="input-group-text">Rp</span>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Amount (to the nearest dollar)"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-8">
+          <p>PTKP</p>
+        </div>
+        <div class="col-4">
+          <div class="input-group">
+            <button
+              class="btn btn-outline-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Category PTKP
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" href="#" data-ptkp="54000000"
+                  >Tidak Kawin / 0 Tanggungan</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" data-ptkp="58500000"
+                  >Tidak Kawin / 1 Tanggungan</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" data-ptkp="63000000"
+                  >Tidak Kawin / 2 Tanggungan</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" data-ptkp="67500000"
+                  >Tidak Kawin / 3 Tanggungan</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#" data-ptkp="58500000"
+                  >Kawin / 0 Tanggungan</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" data-ptkp="63000000"
+                  >Kawin / 1 Tanggungan</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" data-ptkp="67500000"
+                  >Kawin / 2 Tanggungan</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" data-ptkp="72000000"
+                  >Kawin / 3 Tanggungan</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#" data-ptkp="112500000"
+                  >Suami dan Istri digabung / 0 Tanggungan</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" data-ptkp="117000000"
+                  >Suami dan Istri digabung / 1 Tanggungan</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" data-ptkp="121500000"
+                  >Suami dan Istri digabung / 2 Tanggungan</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" data-ptkp="126000000"
+                  >Suami dan Istri digabung / 3 Tanggungan</a
+                >
+              </li>
+            </ul>
+            <span class="input-group-text">Rp</span>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Text input with dropdown button"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-8">
+          <p>PKP</p>
+        </div>
+        <div class="col-4">
+          <div class="input-group">
+            <span class="input-group-text">Rp</span>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Amount (to the nearest dollar)"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-8">
+          <p>PPH 21 Total</p>
+        </div>
+        <div class="col-4">
+          <div class="input-group">
+            <span class="input-group-text">Rp</span>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Amount (to the nearest dollar)"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-8">
+          <p class="ps-5">
+            Penghasilan tahunan Rp0 – Rp60.000.000/tahun dikenakan tarif 5%.
+          </p>
+        </div>
+        <div class="col-4">
+          <div class="input-group">
+            <span class="input-group-text">Rp</span>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Amount (to the nearest dollar)"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-8">
+          <p class="ps-5">
+            Penghasilan tahunan Rp60.000.000 – Rp250.000.000/tahun dikenakan
+            tarif 15%.
+          </p>
+        </div>
+        <div class="col-4">
+          <div class="input-group">
+            <span class="input-group-text">Rp</span>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Amount (to the nearest dollar)"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-8">
+          <p class="ps-5">
+            Perpenghasilan tahunan Rp250.000.000 – Rp500.000.000/tahun dikenakan
+            tarif 25%.
+          </p>
+        </div>
+        <div class="col-4">
+          <div class="input-group">
+            <span class="input-group-text">Rp</span>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Amount (to the nearest dollar)"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-8">
+          <p class="ps-5">
+            Penghasilan tahunan Rp500.000.000 – Rp5.000.000.000/tahun dikenakan
+            tarif 30%
+          </p>
+        </div>
+        <div class="col-4">
+          <div class="input-group">
+            <span class="input-group-text">Rp</span>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Amount (to the nearest dollar)"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-8">
+          <p class="ps-5">
+            Penghasilan tahunan di atas Rp5.000.000.000/tahun dikenakan tarif
+            35%.
+          </p>
+        </div>
+        <div class="col-4">
+          <div class="input-group">
+            <span class="input-group-text">Rp</span>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Amount (to the nearest dollar)"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-8">
+          <p>PPH 21 Perbulan</p>
+        </div>
+        <div class="col-4">
+          <div class="input-group">
+            <span class="input-group-text">Rp</span>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Amount (to the nearest dollar)"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-8">
+          <p>Penghasilan perbulan setelah kena pajak</p>
+        </div>
+        <div class="col-4">
+          <div class="input-group">
+            <span class="input-group-text">Rp</span>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Amount (to the nearest dollar)"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <footer>
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2021 Copyright:
+        <a class="text-reset fw-bold" href="https://imam-8.github.io"
+          >imam-8.github.io</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </body>
+</html>
