@@ -72,10 +72,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Type 1</a>
+              <a class="nav-link active" aria-current="page" href="/pajak/"
+                >Type 1</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled">Type 2</a>
+              <a class="nav-link" aria-current="page" href="/pajak/index2.html"
+                >Type 1</a
+              >
             </li>
           </ul>
         </div>
@@ -212,6 +216,7 @@
           <div class="input-group">
             <span class="input-group-text">Rp</span>
             <input
+              id="pkp"
               type="text"
               class="form-control currency"
               aria-label="Amount (to the nearest dollar)"
@@ -240,6 +245,7 @@
           <div class="input-group">
             <span class="input-group-text">Rp</span>
             <input
+              id="pphtotal"
               type="text"
               class="form-control currency"
               aria-label="Amount (to the nearest dollar)"
@@ -259,6 +265,7 @@
             <div class="input-group">
               <span class="input-group-text">Rp</span>
               <input
+                id="pphLayer1"
                 type="text"
                 class="form-control currency"
                 aria-label="Amount (to the nearest dollar)"
@@ -278,6 +285,7 @@
             <div class="input-group">
               <span class="input-group-text">Rp</span>
               <input
+                id="pphLayer2"
                 type="text"
                 class="form-control currency"
                 aria-label="Amount (to the nearest dollar)"
@@ -297,6 +305,7 @@
             <div class="input-group">
               <span class="input-group-text">Rp</span>
               <input
+                id="pphLayer3"
                 type="text"
                 class="form-control currency"
                 aria-label="Amount (to the nearest dollar)"
@@ -316,6 +325,7 @@
             <div class="input-group">
               <span class="input-group-text">Rp</span>
               <input
+                id="pphLayer4"
                 type="text"
                 class="form-control currency"
                 aria-label="Amount (to the nearest dollar)"
@@ -335,6 +345,7 @@
             <div class="input-group">
               <span class="input-group-text">Rp</span>
               <input
+                id="pphLayer5"
                 type="text"
                 class="form-control currency"
                 aria-label="Amount (to the nearest dollar)"
@@ -352,6 +363,7 @@
           <div class="input-group">
             <span class="input-group-text">Rp</span>
             <input
+              id="pph21PerMonth"
               type="text"
               class="form-control currency"
               aria-label="Amount (to the nearest dollar)"
@@ -368,6 +380,7 @@
           <div class="input-group">
             <span class="input-group-text">Rp</span>
             <input
+              id="incomeAfterTax"
               type="text"
               class="form-control currency"
               aria-label="Amount (to the nearest dollar)"
@@ -397,25 +410,38 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      let ptkp;
+      let ptkp = 0;
       let incomePerMonth;
-      let incomePerYear;
+      let incomePerYear = 0;
       let pkp;
+      let pphtotal;
       let pph21PerMonth;
       let incomeAfterTax;
       // Create a new Intl.NumberFormat object with the desired options
-      const formatter = new Intl.NumberFormat("id-ID", {
-        style: "currency",
-        currency: "IDR",
-        currencyDisplay: "code",
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0,
-      });
+      const formatter = {
+        format(num) {
+          // Use the Intl.NumberFormat object to format the number
+          const formatter = new Intl.NumberFormat("id-ID", {
+            style: "currency",
+            currency: "IDR",
+            currencyDisplay: "symbol",
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+          });
+
+          // Format the number and return the result
+          return formatter.format(num).slice(3);
+        },
+      };
 
       // Get all the input elements with the class "currency"
       const inputElements = document.querySelectorAll(".currency");
-
       // Iterate over the input elements and attach an event listener to each element
+      inputElements.forEach((inputElement) => {
+        inputElement.addEventListener("focusin", (event) => {
+          event.target.value = event.target.getAttribute("data-actual-value");
+        });
+      });
       inputElements.forEach((inputElement) => {
         inputElement.addEventListener("change", (event) => {
           // Get the value of the input element
@@ -432,31 +458,27 @@
 
             // Store the actual data (unformatted value) in a data attribute
             event.target.setAttribute("data-actual-value", inputValue);
-            
-            if (inputId === "incomePerMonth") {
-              // Calculate the income per year by multiplying the income per month by 12
-              incomePerYear = inputValue* 12;
-              const incomePerYearInput =
-                document.querySelector("#incomePerYear");
-              const formattedincomePerYear = formatter.format(incomePerYear);
-              // Set the value of the "IncomePerYear" input element to the calculated income per year
-              incomePerYearInput.value = formattedincomePerYear;
-              incomePerYearInput.setAttribute(
-                "data-actual-value",
-                incomePerYear
+            if (inputId === "incomePerMonth" || inputId === "incomePerYear") {
+              if (inputId === "incomePerMonth") {
+                incomePerMonth = inputValue;
+                incomePerYear = inputValue * 12;
+              } else {
+                incomePerMonth = inputValue / 12;
+                incomePerYear = inputValue;
+              }
+              pphcount(incomePerYear, ptkp);
+
+              const incomeInput =
+                inputId === "incomePerMonth"
+                  ? document.querySelector("#incomePerYear")
+                  : document.querySelector("#incomePerMonth");
+              const formattedIncome = formatter.format(
+                inputId === "incomePerMonth" ? incomePerYear : incomePerMonth
               );
-            }
-            if (inputId === "incomePerYear") {
-              // Calculate the income per year by multiplying the income per month by 12
-              incomePerMonth = inputValue / 12;
-              const incomePerMonthInput =
-                document.querySelector("#incomePerMonth");
-              const formattedincomePerMonth = formatter.format(incomePerMonth);
-              // Set the value of the "IncomePerYear" input element to the calculated income per year
-              incomePerMonthInput.value = formattedincomePerMonth;
-              incomePerMonthInput.setAttribute(
+              incomeInput.value = formattedIncome;
+              incomeInput.setAttribute(
                 "data-actual-value",
-                incomePerMonth
+                inputId === "incomePerMonth" ? incomePerYear : incomePerMonth
               );
             }
           } else {
@@ -465,6 +487,116 @@
           }
         });
       });
+      function pphcount(incomePerYear, ptkp) {
+        pkp = incomePerYear - ptkp;
+        if (pkp < 0) {
+          pkp = 0;
+        }
+        const pkpInput = document.querySelector("#pkp");
+        pkpInput.value = formatter.format(pkp);
+        pkpInput.setAttribute("data-actual-value", pkp);
+        if (ptkp === 0) {
+          pkpInput.value = "please select ptkp";
+          return;
+        }
+        if (incomePerYear === 0) {
+          pkpInput.value = "please input penghasilan";
+          return;
+        }
+        console.log(pkp);
+        const pphLayer1 = document.querySelector("#pphLayer1");
+        const pphLayer2 = document.querySelector("#pphLayer2");
+        const pphLayer3 = document.querySelector("#pphLayer3");
+        const pphLayer4 = document.querySelector("#pphLayer4");
+        const pphLayer5 = document.querySelector("#pphLayer5");
+        const pphTotalInput = document.querySelector("#pphtotal");
+        const pph21PerMonthInput = document.querySelector("#pph21PerMonth");
+        const incomeAfterTaxInput = document.querySelector("#incomeAfterTax");
+        const taxRates = [5, 15, 25, 25, 35];
+        const taxBrackets = [
+          60000000,
+          250000000,
+          500000000,
+          5000000000,
+          Infinity,
+        ];
+
+        let pph1 = 0;
+        let pph2 = 0;
+        let pph3 = 0;
+        let pph4 = 0;
+        let pph5 = 0;
+
+        if (pkp > 0) {
+          for (let i = 0; i < taxBrackets.length; i++) {
+            const taxBracket = taxBrackets[i];
+            if (pkp >= taxBracket) {
+              // Calculate tax for this bracket
+              const tax = (taxBracket * taxRates[i]) / 100;
+              // Decrease pkp by taxBracket
+              pkp -= taxBracket;
+              // Assign tax to the appropriate pph variable
+              if (i === 0) {
+                pph1 = tax;
+              } else if (i === 1) {
+                pph2 = tax;
+              } else if (i === 2) {
+                pph3 = tax;
+              } else if (i === 3) {
+                pph4 = tax;
+              } else if (i === 4) {
+                pph5 = tax;
+              }
+            } else {
+              // Calculate tax for remaining amount in pkp
+              const tax = (pkp * taxRates[i]) / 100;
+              // Assign tax to the appropriate pph variable
+              if (i === 0) {
+                pph1 = tax;
+              } else if (i === 1) {
+                pph2 = tax;
+              } else if (i === 2) {
+                pph3 = tax;
+              } else if (i === 3) {
+                pph4 = tax;
+              } else if (i === 4) {
+                pph5 = tax;
+              }
+              // Set pkp to 0 to exit the loop
+              pkp = 0;
+            }
+          }
+        }
+        pphtotal = pph1 + pph2 + pph3 + pph4 + pph5;
+        pph21PerMonth = pphtotal / 12;
+        incomeAfterTax = incomePerMonth - pph21PerMonth;
+
+        inputs = [
+          pphLayer1,
+          pphLayer2,
+          pphLayer3,
+          pphLayer4,
+          pphLayer5,
+          pphTotalInput,
+          pph21PerMonthInput,
+          incomeAfterTaxInput,
+        ];
+        values = [
+          pph1,
+          pph2,
+          pph3,
+          pph4,
+          pph5,
+          pphtotal,
+          pph21PerMonth,
+          incomeAfterTax,
+        ];
+
+        for (i = 0; i < inputs.length; i++) {
+          inputs[i].value = formatter.format(values[i]);
+          inputs[i].setAttribute("data-actual-value", values[i]);
+        }
+      }
       ///////////////////////////////////////////////////////////////
       // Get the div element with the id "ptkp"
       const ptkpDiv = document.querySelector("#ptkp");
@@ -484,8 +616,9 @@
           // Set the value of the input element to the ptkpValue
 
           const formattedValueptkp = formatter.format(ptkpValue);
-          ptkpInput.value = ptkpValue;
+          ptkpInput.value = formattedValueptkp;
           ptkp = ptkpValue;
+          pphcount(incomePerYear, ptkp);
         });
       });
     </script>
