@@ -95,6 +95,7 @@
           <div class="input-group">
             <span class="input-group-text">Rp</span>
             <input
+            pattern="[0-9]+"
               type="text"
               id="incomePerMonth"
               class="form-control currency"
@@ -111,6 +112,7 @@
           <div class="input-group">
             <span class="input-group-text">Rp</span>
             <input
+            pattern="[0-9]+"
               id="incomePerYear"
               type="text"
               class="form-control currency"
@@ -433,7 +435,7 @@
           return formatter.format(num).slice(3);
         },
       };
-
+      
       // Get all the input elements with the class "currency"
       const inputElements = document.querySelectorAll(".currency");
       // Iterate over the input elements and attach an event listener to each element
@@ -443,9 +445,9 @@
         });
       });
       inputElements.forEach((inputElement) => {
-        inputElement.addEventListener("change", (event) => {
+        inputElement.addEventListener("keyup", (event) => {
           // Get the value of the input element
-          const inputValue = event.target.value;
+          const inputValue = event.target.value.replace(/[^0-9]/g, "");
           if (/^\d*$/.test(inputValue)) {
             const inputId = event.target.id;
             // The input value is valid, do nothing
@@ -483,7 +485,7 @@
             }
           } else {
             // The input value is not valid, set the value to the empty string
-            event.target.value = "";
+            // event.target.value = "";
           }
         });
       });
@@ -503,7 +505,6 @@
           pkpInput.value = "please input penghasilan";
           return;
         }
-        console.log(pkp);
         const pphLayer1 = document.querySelector("#pphLayer1");
         const pphLayer2 = document.querySelector("#pphLayer2");
         const pphLayer3 = document.querySelector("#pphLayer3");
